@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="in.spac.beans.Address" id="address">
+		<property name="houseNo" value="234"></property>
+		<property name="city" value="ghaziabad"></property>
+		<property name="state" value="Uttar Pradesh"></property>
+		<property name="pincode" value="201001"></property>
+	</bean>
+	
+	    <bean class="in.spac.beans.Address" id="address1">
+		<property name="houseNo" value="127"></property>
+		<property name="city" value="Amsterdam"></property>
+		<property name="state" value="North Holland"></property>
+		<property name="pincode" value="1008"></property>
+	</bean>
+
+	
+	<bean class="in.spac.beans.Caste" id="caste">
+		<property name="caste" value="OBC"></property>
+	</bean>
+	
+	<bean class="in.spac.beans.Subjects" id="subjects">
+		<property name="subjects" >
+			<list>
+				<value>DSA</value>
+				<value>Big Data</value>
+				<value>Maths </value>
+				<value>Theory of automata and formal language</value>
+				<value>Operating System</value>
+				<value>C</value>
+				<value>JAVA </value>
+				<value>Mobile Computing</value>
+			</list>
+		</property> 
+	</bean>
+	<bean class="in.spac.beans.Student" id="stdId" autowire="byName">
+		<property name="name" value="Anjali kumari"></property>
+		<property name="rollno" value="1300"></property>
+	</bean>
+
+</beans>
